@@ -19,6 +19,7 @@ class Zones extends StatelessWidget {
             child: ListView(
               children: [
                 DropdownButton<Region>(
+                  menuMaxHeight: 12,
                   items: controller.regions
                       .map<DropdownMenuItem<Region>>((Region value) {
                     return DropdownMenuItem<Region>(
@@ -35,11 +36,11 @@ class Zones extends StatelessWidget {
                       labelText: "Enter the Zone title to add in region"),
                 ),
                 const SizedBox(height: 20),
-                ListView(
-                  children: controller.zones
-                      .map((element) => Text(element.title))
-                      .toList(),
-                )
+                // ListView(
+                //   children: controller.zones
+                //       .map((element) => Text(element.title))
+                //       .toList(),
+                // )
               ],
             ),
           )),
